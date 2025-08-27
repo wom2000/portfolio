@@ -149,7 +149,7 @@ main .temp img {
 /* Para telas com largura máxima de 600px (celulares) */
 @media (max-width: 600px) {
     main {
-        width: 70%;        /* Main ocupa 90% da tela */
+        width: 80%;        /* Main ocupa 90% da tela */
         height: auto;      /* Altura se ajusta ao conteúdo */
         padding: 20px;     /* Reduz padding */
         border-radius: 20px; /* Bordas menores */
