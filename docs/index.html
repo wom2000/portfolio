@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>weather</title>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/all.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="stars-bg"></div>
+    <main>
+        <div class="screen">
+            <form id="searchform">
+                <input type="text" placeholder="Enter City Name" id="valuesearch">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass" style="color: #353535;"></i>
+                </button>
+            </form>
+            <section class="result" id="result">
+                <p class="initial-message" id="initialMessage">Pick a city too see the weather</p>
+                
+                <figure class="temp" id="temp" style="display:none;">
+                    <img src="" alt="temp">
+                    <figcaption>  
+                        <span class="temperature"></span>
+                        <span>°</span>
+                    </figcaption>
+                </figure>
+                
+                <figure class="name" id="city" style="display:none;">
+                    <figcaption></figcaption>
+                </figure>
+                
+                <p class="time" id="time" style="display:none;"></p>
+                <p class="description" style="display:none;"></p>
+            </section>
+            
+        </div>
+    </main>
+
+
+
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="js/all.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>    
+</body>
+</html>
