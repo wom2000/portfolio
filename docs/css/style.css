@@ -146,17 +146,17 @@ main .temp img {
     margin-top: 20px;
 }
 
-/* Para telas com largura máxima de 600px (celulares) */
+
 @media (max-width: 600px) {
     main {
-        width: 80%;        /* Main ocupa 90% da tela */
-        height: auto;      /* Altura se ajusta ao conteúdo */
-        padding: 20px;     /* Reduz padding */
-        border-radius: 20px; /* Bordas menores */
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
     }
 
     main form input, main form button {
-        padding: 15px; /* Ajusta inputs e botões para telas pequenas */
+        padding: 15px; 
     }
 
     main .temp img {
