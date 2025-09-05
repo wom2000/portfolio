@@ -19,21 +19,21 @@ p{
 
 @font-face {
 	font-family: 'Bebas Neue';
-	src: url('../fonts/Bebas_Neue,Montserrat/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+	src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Be Vietnam Pro';
-	src: url('fonts/BeVietnamPro-Regular.ttf') format('truetype');
+	src: url('../fonts/BeVietnamPro-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'bigfish';
-	src: url('fonts/bigfish.otf') format('truetype');
+	src: url('../fonts/bigfish.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -114,6 +114,36 @@ p{
 	cursor: pointer;
     margin-left: auto;
     padding-right: 20px;
+}
+@media screen and (max-width: 768px) {
+    .navbar-collapse {
+        display: none; 
+        position: absolute;
+        top: 80px; 
+        right: 0;
+        width: 100%;
+        height: 50vh;
+        background-color: #ffffff; 
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .navbar-collapse.show {
+        display: flex; 
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar-logo img {
+        width: 100px;
+        height: auto;
+    }
+
+   
 }
 
 /****header***/
@@ -204,7 +234,7 @@ p{
     }
 
     .primeira-texto{
-        bottom: 100px;
+        bottom: 70px;
     }
 
     .container-botao {
@@ -289,6 +319,7 @@ p{
 	text-align: left;
 	text-transform:capitalize;
 	margin-left: -40px;
+    margin-bottom: -30px;
 }
 
 
@@ -420,7 +451,7 @@ p{
   
    
     .fabric img {
-      width: 120px;
+      width: 100px;
       height: auto;
       margin-right: 15px;
     }
@@ -430,6 +461,10 @@ p{
       margin: 0;
       text-align: left;
     }
+
+    .fabric p:nth-of-type(2) {
+        display: none;
+      }
   
     .container-mais {
       margin-left: auto;
@@ -499,41 +534,38 @@ p{
 }
 
 @media (max-width: 768px) {
-    .container-terceira {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-    }
+
     .conteudo { 
-      flex-direction: column; 
-      width: 80%;
+      flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 0;
+      justify-content: center;
+      gap: 0px;
+
+    }
+
+    .lado-esquerdo, .lado-direito {
+      width: 100%;
+      margin: 0;
     }
   
-    .lado-esquerdo {
-      margin-left: 0;
-    }
-  
-    .lado-esquerdo img {
-      display: block;
-      margin: 0 auto;
-    }
+
   
     .container-texto p {
-      font-size: 16px; 
+      font-size: 14px; 
       line-height: 28px;
-      margin: 0 auto;
-      max-width: 90%;
+      max-width: 100%;
+      margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .lado-direito img {
+        width: 80%;
+        height: auto;
+        margin-top: 20px;
     }
   
-    .lado-direito img {
-      width: 90%;
-      max-width: 400px;
-      margin: 0 auto;
-      display: block;
-    }
+    
   }
   
 
