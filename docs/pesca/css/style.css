@@ -166,7 +166,7 @@ p{
 	color: white;
 	position: absolute; 
 	width: 100%; 
-	bottom: 50px;
+	bottom: 20px;
 	word-spacing: 30px;
 	letter-spacing: 5px;
 	white-space: nowrap; 
@@ -240,7 +240,7 @@ p{
     .container-botao {
         justify-content: center; 
         margin-right: 0px;
-        padding-top: 100px;
+        padding-top: 30px;
     }    
 }
 /**primeira seção **/
@@ -440,7 +440,14 @@ p{
       padding-bottom: 20px;
       padding-top: 20px;
     }
+    .container-segunda h2{
+        font-size: 42px;
+    }
+    .choose p{
+        font-size: 42px;
+    }
 
+    
     .fabric {
       flex-direction: row;
       width: 100%;
@@ -939,6 +946,7 @@ p{
       flex-direction: column;
       height: auto;
       padding: 0;
+      margin-top: -50px;
     }
     .mixtext-container h2,
     .mixtext-container h1,
@@ -947,15 +955,21 @@ p{
       margin-left: 0;
       text-align: center;
       margin-bottom: 0;
+      
     }
 
-    .mixtext-container h2 h1 {
+    .mixtext-container h2 {
         align-items: center; 
         justify-content: center;
         margin-left: 0;
         text-align: center;
+        font-size: 40px;
 
     }
+    .mixtext-container h1 {
+        font-size: 60px;
+    }
+
   
     .right-column, .left-column {
       width: 100%;
@@ -974,31 +988,43 @@ p{
         display: flex;
         justify-content: center;
         gap: 15px;
-        margin-top: -30px;
+        margin-top: -50px;
+        width: 80%;
       }
     .fabric-description{
         text-align: center;
         width: 90%; 
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 20px;
+    }
+
+    .fabric-options img {
+        border-radius: 20px;
     }
   
     /* Botão Back à esquerda e Next à direita, no fundo */
     .left-column .container-botaoback {
       position: absolute;
-      bottom: 20px;
-      left: 40px;
+      left: 20px;
+      bottom: 100px;
     }
   
     .right-column .container-botaonext {
       position: absolute;
-      bottom: 20px;
       right: 0;
+      bottom: 30px;
+    }
+    .right-column{
+        margin-top: -70px;
+        height: auto;
     }
 
     /* Chapéu responsivo */
     .hat-preview img {
       width: 80%;
       max-width: 400px;
-      margin-top: 160px;
+      margin-top: 30px;
       margin-left: 0;
     }
   
@@ -1006,23 +1032,24 @@ p{
     .progress-bar {
       width: 80%;
       max-width: 400px;
-      margin: 70px auto 20px auto;
+      margin: 40px auto 60px auto;
     }
   
   
   }.color-grid {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: 20px;
-    justify-content:left;  /* centra o grid todo */
+    gap: 14px;
+    justify-content:center;  /* centra o grid todo */
     align-items: center;  
-    margin-top: -100px;   
+    margin-top: -100px;  
+    width: 80%; 
    
   }
   
   .color-btn {
-    width: 100px !important;
-    height: 100px !important;
+    width: 70px !important;
+    height: 70px !important;
     border-radius: 50%;  /* garante círculo */
     cursor: pointer;
     display: block;  
