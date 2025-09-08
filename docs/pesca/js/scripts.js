@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p><strong>${item.fabric}</strong> (${item.color})</p>
                     <p>${item.label || ""}</p>
                 </div>
-                <button class="remove-btn" data-index="${index}">✖</button>
+                <button class="remove-btn" data-index="${index}"><i class="fa-solid fa-x"></button>
             `;
             cartItemsDiv.appendChild(div);
         });
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (checkoutBtn) {
-        checkoutBtn.addEventListener("click", () => alert("Ir para o checkout..."));
+        checkoutBtn.addEventListener("click", () => alert("works like this :)"));
     }
 
     updateCartCount();
@@ -77,8 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const progress = document.querySelector(".progress");
     const descricaoDiv = document.querySelector(".fabric-description");
     const container = document.querySelector(".fabric-options");
-    const h2 = document.querySelector("h2");
-    const h1 = document.querySelector("h1");
+    const h2 = document.querySelector(".step-title");
+    const h1 = document.querySelector(".step-subtitle");
+    
     const nextBtn = document.querySelector(".next");
 
     if (!hatImage || !nextBtn || !container) return; // Sai se não existir elementos da página mixtext

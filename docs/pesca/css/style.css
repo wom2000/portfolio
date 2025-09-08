@@ -136,7 +136,7 @@ p{
     top: 0;
     right: -400px; /* escondido */
     width: 400px;
-    height: 100%;
+    height: auto;
     background: #fff;
     box-shadow: -2px 0 8px rgba(0,0,0,0.2);
     transition: right 0.3s ease;
@@ -144,6 +144,14 @@ p{
     padding: 20px;
     overflow-y: auto;
   }
+
+  .cart-header {
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  } 
   
   #cart-sidebar.open {
     right: 0px; /* aparece */
@@ -162,12 +170,61 @@ p{
     margin-right: 10px;
   }
   
-  .remove-btn {
-    background: none;
-    border: none;
-    font-size: 18px;
+  .checkout-btn {
+    display: block;           /* para poder usar margin auto */
+    margin: 20px auto;        /* centraliza horizontalmente e dá espaço em cima e em baixo */
+    z-index: 2;
+    text-decoration: none;
+    background-color: transparent;
+    border: 3px solid #83FF15;
+    color: #353535;
+    padding: 10px 50px 4px 50px;
+    font-size: 24px;
+    border-radius: 100px;
     cursor: pointer;
-    color: red;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+#close-cart {
+    position: absolute; /* alterado para absolute */
+    top: 20px;          /* distância do topo do sidebar */
+    right: 20px;        /* distância da direita */
+    z-index: 2;
+    text-decoration: none;
+    background-color: transparent;
+    border: 3px solid #83FF15;
+    color: #353535;
+    padding: 5px 8px;
+    font-size: 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .remove-btn {
+        position: relative;
+        z-index: 2;
+        text-decoration: none;
+        background-color: transparent;
+        border: 3px solid #83FF15;
+        color: #353535;
+        padding: 5px 8px;
+        font-size: 24px;
+        border-radius: 100px;
+        cursor: pointer;
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 1px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center
   }
   
 @media screen and (max-width: 768px) {
