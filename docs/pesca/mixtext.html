@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/all.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -30,12 +32,26 @@
 			</div>
 
 			<div class="icons">
-			  <a href="login.html" class="nav-icon"><i class="fa-solid fa-user"></i></a>
-			  <a href="shopbag.html" class="nav-icon"><i class="fa-solid fa-bag-shopping"></i></a>
-			</div>
+        <a href="login.html" class="nav-icon"><i class="fa-solid fa-user"></i></a>
+        <div id="cart-icon" class="nav-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+      </div>
+      
+      <!-- Sidebar Carrinho -->
+      <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+          <h2>Carrinho</h2>
+          <button id="close-cart">✖</button>
+        </div>
+        <div id="cart-items"></div>
+        <button id="checkout-btn" class="checkout-btn">Avançar</button>
+      </div>
 		  </div>
 		</nav>
 	  </header>
+
 
 	  <main>
 		<section class="mixtext-container">
