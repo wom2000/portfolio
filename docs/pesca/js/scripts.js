@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p><strong>${item.fabric}</strong> (${item.color})</p>
                     <p>${item.label || ""}</p>
                 </div>
-                <button class="remove-btn" data-index="${index}"><i class="fa-solid fa-x"></button>
+                <button class="remove-btn" data-index="${index}"><i class="fa-solid fa-x"></i></button>
             `;
             cartItemsDiv.appendChild(div);
         });
@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const h1 = document.querySelector(".step-subtitle");
     
     const nextBtn = document.querySelector(".next");
+    const fundo = document.querySelector(".botao-fundo7");
 
     if (!hatImage || !nextBtn || !container) return; // Sai se não existir elementos da página mixtext
 
@@ -248,6 +249,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             nextBtn.style.display = "none";
+            fundo.style.display = "none";
+
+            
             currentStep = 4;
         }
     });

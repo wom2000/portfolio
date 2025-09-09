@@ -133,12 +133,11 @@ p{
 }
 #cart-sidebar {
     position: fixed;
-    top: 0;
-    right: -400px; /* escondido */
-    width: 400px;
+    top: 86px;
+    right: -100%; /* escondido */
+    width: 100%;
     height: auto;
     background: #fff;
-    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
     transition: right 0.3s ease;
     z-index: 1000;
     padding: 20px;
@@ -147,6 +146,7 @@ p{
 
   .cart-header {
     font-family: 'Bebas Neue', sans-serif;
+    color: #3942E0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -217,7 +217,7 @@ p{
         border: 3px solid #83FF15;
         color: #353535;
         padding: 5px 8px;
-        font-size: 24px;
+        font-size: 12px;
         border-radius: 100px;
         cursor: pointer;
         font-family: 'Bebas Neue', sans-serif;
@@ -956,7 +956,7 @@ p{
 	height: 100%;
 	border: 3px solid #83FF15;
 	border-radius: 100px;
-	z-index: 1;
+
 }
  
 .back {
@@ -1202,7 +1202,8 @@ p{
 }
 
 .add-btn {
-    margin-top: 40px;
+    margin-bottom: 120px;
+    margin-top: -20px;
     padding: 14px 28px;
     font-size: 20px;
     font-family: 'Bebas Neue', sans-serif;
