@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> 
 <head>
-	<title>HOEMPAGE</title>
+	<title>PESCA-CHAT</title>
 <meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
@@ -15,36 +15,57 @@
 	<header>
 		<nav class="navbar navbar-expand-lg">
 		  <div class="container">
-			
 			<a class="navbar-logo" href="index.html">
 			  <img src="img/logo.png" alt="logo">
 			</a>
-
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="toggle navigation">
 			  <i class="fa-solid fa-bars"></i>
 			</button>
 			<div class="collapse navbar-collapse" id="menu">
 			  <ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="hats.html">Hats</a></li>
 				<li class="nav-item"><a class="nav-link" href="mixtext.html">Mix&Text</a></li>
 				<li class="nav-item"><a class="nav-link" href="chat.html">Chat</a></li>
 			  </ul>
 			</div>
 
 			<div class="icons">
-			  <a href="login.html" class="nav-icon"><i class="fa-solid fa-user"></i></a>
-			  <a href="shopbag.html" class="nav-icon"><i class="fa-solid fa-bag-shopping"></i></a>
-			</div>
-
+        <a href="login.html" class="nav-icon"><i class="fa-solid fa-user"></i></a>
+        <div id="cart-icon" class="nav-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+      </div>
+      
+      <!-- Sidebar Carrinho -->
+      <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+          <h2>Shopbag</h2>
+          <button id="close-cart"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <div id="cart-items"></div>
+        <button id="checkout-btn" class="checkout-btn">Avançar</button>
+      </div>
 		  </div>
 		</nav>
 	  </header>
 
-	  <main>
-		<section class="hero">
-		</section>
 
+	  <main>
+
+		<div class="chatsection">
+			<div class="chattitle"><h1>Ask for Help</h1></div>
+			<form class="chat-form">
+				<input type="email" placeholder="email" required><br>
+				<textarea placeholder="mensagem" required></textarea>
+				<div class="container-botaochat">
+				  <div class="botaochat">
+					<div class="botao-fundo9"></div>
+					<a href="index.html" class="enviar">enviar</a>
+				  </div>
+			  </div>
+		  </div>
+			  </form>
+		</div>
 
 
 
@@ -52,10 +73,45 @@
 	  </main>
 
 
-
-
-
-
+	  <footer class="footer">
+		<div class="footer-container">
+		  <div class="footer-coluna">
+			<div class="footer-logo">
+			  <img src="img/logo.png" alt="Logo">
+			</div>
+			<div class="footer-contactos">
+			  <h4>Contactos</h4>
+			  <p>Email: info@pesca.com</p>
+			  <p>Telefone: +351 912 345 678</p>
+			  <div class="footer-redes">
+				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+				<a href="#"><i class="fa-brands fa-facebook"></i></a>
+			  </div>
+			</div>
+		  </div>
+		  <div class="footer-coluna">
+			<h4>Menu</h4>
+			<ul class="footer-menu">
+			  <li><a href="#">home</a></li>
+			  <li><a href="#">mix&text</a></li>
+			  <li><a href="#">chat</a></li>
+			</ul>
+		  </div>
+		  <div class="footer-coluna">
+			<h4>Tira a tua dúvida</h4>
+			<form class="footer-form">
+			  <input type="email" placeholder="email" required>
+			  <textarea placeholder="mensagem" required></textarea>
+			  <div class="container-botaofooter">
+				<div class="botaofooter">
+				  <div class="botao-fundo5"></div>
+				  <a href="index.html" class="enviar">enviar</a>
+				</div>
+			</div>
+		</div>
+			</form>
+		  </div>
+      </footer>
 	<!-- importação jquery e bootstrap-->
 
 	<script src="js/jquery-3.7.1.min.js"></script>
