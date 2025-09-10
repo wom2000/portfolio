@@ -449,6 +449,11 @@ p{
     align-items: center;
     box-sizing: border-box;
   }
+
+  .container-mix{
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
   
   .container-mais {
     margin: 0 0 0 240px;
@@ -1256,12 +1261,14 @@ p{
 	padding: 10px;
 	margin-bottom: 10px;
 	border: 3px solid #83FF15;
-	border-radius: 100px;
 }
 .chat-form input{
     margin-top: 100px;
+    border-radius: 30px;
 }
-
+.chat-form textarea {
+    border-radius: 20px;
+}
 
 .container-botaochat {
 	display: flex;
@@ -1287,7 +1294,7 @@ p{
 	z-index: 1;
 }
  
-.enviar {
+.send {
 	position: relative;
 	z-index: 2;
 	text-decoration: none;

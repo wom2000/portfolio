@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>tictactoe</title>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/all.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+  <body>
+    <div class="paint-app">
+      <header class="toolbar">
+        <div class="controls-left">
+          <label class="control">
+            <input type="color" id="colorPicker" value="#000000" title="Cor" />
+          </label>
+  
+          <label class="control">
+            <input type="range" id="brushSize" min="1" max="50" value="4" title="Tamanho do pincel">
+          </label>
+  
+          <button id="pencilBtn" class="btn active" title="Lápis">✎</button>
+          <button id="eraserBtn" class="btn" title="Borracha">🧽</button>
+          <button id="fillBtn" class="btn" title="Preencher (fundo)">🫧</button>
+        </div>
+  
+        <div class="controls-right">
+          <button id="undoBtn" class="btn" title="Desfazer (undo)">↶</button>
+          <button id="clearBtn" class="btn" title="Limpar">✕</button>
+          <button id="saveBtn" class="btn" title="Guardar (download)">⬇</button>
+        </div>
+      </header>
+  
+      <main class="canvas-wrap">
+        <canvas id="canvas"></canvas>
+      </main>
+  
+      <footer class="info">
+        <small>Dica: usa touch ou rato. Undo guarda até 30 estados.</small>
+      </footer>
+    </div>
+
+  
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="js/all.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>    
+</body>
+</html>

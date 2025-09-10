@@ -1,0 +1,109 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	transition: .5s;
+	overflow-x: hidden;
+}
+img{
+	max-width: 100%;
+}
+p{
+	font-family: sans-serif;
+	color: black;
+}
+
+
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Be Vietnam Pro';
+	src: url('../fonts/BeVietnamPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'bigfish';
+	src: url('../fonts/Bigfish.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/****header***/
+ 
+/* Fundo estilo macOS */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../img/wallpaper.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+/* Área de ícones */
+.desktop {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  gap: 40px;
+  padding: 60px;
+}
+
+.icon {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.icon img {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+}
+
+.icon span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Dock estilo Mac */
+.dock {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.dock img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.2s;
+}
+
+.dock img:hover {
+  transform: scale(1.3);
+}

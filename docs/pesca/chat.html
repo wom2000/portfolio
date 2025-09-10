@@ -30,7 +30,9 @@
 			</div>
 
 			<div class="icons">
-        <a href="login.html" class="nav-icon"><i class="fa-solid fa-user"></i></a>
+				<a href="#" class="nav-icon" data-bs-toggle="modal" data-bs-target="#loginModal">
+					<i class="fa-solid fa-user"></i>
+				  </a>
         <div id="cart-icon" class="nav-icon">
           <i class="fa-solid fa-bag-shopping"></i>
         </div>
@@ -60,7 +62,7 @@
 				<div class="container-botaochat">
 				  <div class="botaochat">
 					<div class="botao-fundo9"></div>
-					<a href="index.html" class="enviar">enviar</a>
+					<a href="index.html" class="send">enviar</a>
 				  </div>
 			  </div>
 		  </div>
@@ -112,6 +114,29 @@
 			</form>
 		  </div>
       </footer>
+	  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="mb-3">
+                  <label for="senha" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 	<!-- importação jquery e bootstrap-->
 
 	<script src="js/jquery-3.7.1.min.js"></script>
