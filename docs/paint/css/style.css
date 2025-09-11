@@ -99,7 +99,6 @@ input[type="range"] {
     flex-direction: column;
   }
 
-
   .controls-left, 
   .controls-right {
     flex-direction: row;
