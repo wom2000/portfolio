@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> 
 <head>
-<title>tictactoe</title>
+<title>PAINT</title>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
 
 </head>
   <body>
-    <div class="paint-app">
+    <div class="paint-container">
       <header class="toolbar">
         <div class="controls-left">
           <label class="control">
@@ -22,25 +22,20 @@
             <input type="range" id="brushSize" min="1" max="50" value="4" title="Tamanho do pincel">
           </label>
   
-          <button id="pencilBtn" class="btn active" title="Lápis">✎</button>
-          <button id="eraserBtn" class="btn" title="Borracha">🧽</button>
-          <button id="fillBtn" class="btn" title="Preencher (fundo)">🫧</button>
+          <button id="pencilBtn" class="btn active" title="Lápis"><i class="fa-solid fa-pencil"></i></button>
+          <button id="eraserBtn" class="btn" title="Borracha"><i class="fa-solid fa-eraser"></i></button>
         </div>
   
         <div class="controls-right">
-          <button id="undoBtn" class="btn" title="Desfazer (undo)">↶</button>
-          <button id="clearBtn" class="btn" title="Limpar">✕</button>
-          <button id="saveBtn" class="btn" title="Guardar (download)">⬇</button>
+          <button id="undoBtn" class="btn" title="Desfazer (undo)"><i class="fa-solid fa-arrow-left"></i></button>
+          <button id="clearBtn" class="btn" title="Limpar"><i class="fa-solid fa-xmark"></i></button>
+          <button id="saveBtn" class="btn" title="Guardar (download)"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
       </header>
   
       <main class="canvas-wrap">
         <canvas id="canvas"></canvas>
       </main>
-  
-      <footer class="info">
-        <small>Dica: usa touch ou rato. Undo guarda até 30 estados.</small>
-      </footer>
     </div>
 
   

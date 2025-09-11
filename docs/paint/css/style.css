@@ -1,104 +1,120 @@
-*{
-	box-sizing: border-box;
-}
-body{
-	margin: 0px;
-	min-height: 100vh;
-	padding: 0px;
-	transition: .5s;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+* {
+  box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "Permanent Marker";
-    src: url("fonts/PermanentMarker.woff2") format("woff2"),
-         url("fonts/PermanentMarker.woff") format("woff"),
-         url("fonts/PermanentMarker-Regular.ttf") format("truetype");
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+  transition: .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter, system-ui, Arial;
+  background-color: #beb4dc;
 }
 
-:root{
-    --bg:#0f1724;
-    --panel:#0b1220cc;
-    --accent:#1f6feb;
-    --muted:#cbd5e1;
+
+.paint-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 10px;
+  padding: 12px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  background: #d1e9accc;
+  border-radius: 10px;
+}
+
+.controls-left, 
+.controls-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.control input[type="color"], 
+.control input[type="range"] {
+  height: 36px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  width: 120px;
+}
+
+.btn {
+  background: transparent;
+  color: #353535;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform .12s ease, background .12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: #FFFFFF;
+}
+
+.btn.active {
+  background: #45596e;
+  color: white;
+  border: none;
+}
+
+.canvas-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+
+@media (max-width: 720px) {
+  .paint-container {
+    flex-direction: column;
   }
-  
-  *{box-sizing:border-box}
-  html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#0b1220 0%, #071026 60%);color:var(--muted);-webkit-font-smoothing:antialiased}
-  .paint-app{display:flex;flex-direction:column;height:100vh;gap:10px;padding:12px}
-  
-  /* Toolbar */
-  .toolbar{
-    display:flex;
-    justify-content:space-between;
-    gap:8px;
-    align-items:center;
-    padding:8px;
-    background:var(--panel);
-    border-radius:10px;
-    backdrop-filter: blur(6px);
-    box-shadow:0 6px 22px rgba(2,6,23,0.6);
+
+  .toolbar {
+    order: 2;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6px;
   }
-  
-  .controls-left, .controls-right{display:flex;gap:8px;align-items:center}
-  
-  .control input[type="color"], .control input[type="range"]{
-    height:36px;
-    border:0;
-    background:transparent;
-    cursor:pointer;
+
+  .controls-left, 
+  .controls-right {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6px;
   }
-  
-  input[type="range"]{width:120px}
-  
-  /* Buttons */
-  .btn{
-    background:transparent;
-    color:var(--muted);
-    border:1px solid rgba(255,255,255,0.06);
-    padding:8px 10px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
-    transition:transform .12s ease, background .12s ease;
+
+  input[type="range"] {
+    width: 80px;
   }
-  .btn:hover{transform:translateY(-2px); background:rgba(255,255,255,0.02)}
-  .btn.active{background:var(--accent); color:white; border-color:var(--accent)}
-  
-  /* Canvas area */
-  .canvas-wrap{
-    flex:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:12px;
-    overflow:hidden;
-    padding:10px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.15));
-  }
-  
-  /* Canvas itself: responsive */
-  #canvas{
-    width:100%;
-    height:100%;
-    max-width:1400px;
-    max-height:820px;
-    background:white;
-    border-radius:8px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-    touch-action: none; /* evita scroll ao desenhar em touch */
-    cursor: crosshair;
-  }
-  
-  /* Footer */
-  .info{ text-align:center; font-size:13px; opacity:0.9 }
-  
-  /* Responsividade */
-  @media (max-width:720px){
-    .toolbar{flex-direction:column; align-items:stretch}
-    .controls-left, .controls-right{justify-content:center;flex-wrap:wrap}
-    input[type="range"]{width:100%}
-  }
-  
+}

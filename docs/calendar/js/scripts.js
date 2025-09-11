@@ -1,7 +1,7 @@
 const calendarDays = document.getElementById('calendar-days');
-const monthYear = document.getElementById('month-year');
-const prevMonth = document.getElementById('prev-month');
-const nextMonth = document.getElementById('next-month');
+const monthYear = document.getElementById('monthyear');
+const prevMonth = document.getElementById('previous');
+const nextMonth = document.getElementById('next');
 
 let today = new Date();
 let currentMonth = today.getMonth();
@@ -20,30 +20,25 @@ function renderCalendar(month, year) {
   const firstDay = new Date(year, month, 1).getDay();
   const lastDate = new Date(year, month + 1, 0).getDate();
 
-  // Preencher dias vazios do começo do mês
   for (let i = 0; i < firstDay; i++) {
     const emptyDiv = document.createElement('div');
     calendarDays.appendChild(emptyDiv);
   }
 
-  // Preencher dias do mês
   for (let day = 1; day <= lastDate; day++) {
     const dayDiv = document.createElement('div');
     dayDiv.innerText = day;
 
-    const dateKey = `${year}-${month + 1}-${day}`; // Chave para localStorage
+    const dateKey = `${year}-${month + 1}-${day}`; 
 
-    // Marcar dia atual
     if (day === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
       dayDiv.classList.add('today');
     }
 
-    // Se houver evento, marcar
     if (localStorage.getItem(dateKey)) {
       dayDiv.classList.add('has-event');
     }
 
-    // Clique no dia
     dayDiv.addEventListener('click', () => {
       const existingEvent = localStorage.getItem(dateKey) || "";
       const eventText = prompt(`Evento para ${day}/${month + 1}/${year}:`, existingEvent);
@@ -60,7 +55,6 @@ function renderCalendar(month, year) {
   }
 }
 
-// Botões de navegação
 prevMonth.addEventListener('click', () => {
   currentMonth--;
   if (currentMonth < 0) {
@@ -79,5 +73,5 @@ nextMonth.addEventListener('click', () => {
   renderCalendar(currentMonth, currentYear);
 });
 
-// Inicializa calendário
 renderCalendar(currentMonth, currentYear);
+

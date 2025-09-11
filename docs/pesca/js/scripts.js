@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // --------------------------
-    // CARRINHO (global)
-    // --------------------------
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
   
     const cartCount = document.getElementById("cart-count");
@@ -70,9 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
     updateCartCount();
   
-    // --------------------------
-    // MIXTEXT (apenas se elementos existirem)
-    // --------------------------
     const hatImage = document.getElementById("hat-image");
     const nextBtn = document.querySelector(".next");
     const container = document.querySelector(".fabric-options");

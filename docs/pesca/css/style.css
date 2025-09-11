@@ -14,6 +14,7 @@ p{
 	font-family: sans-serif;
 	color: black;
 }
+* { outline: 1px solid red; }
 
 
 
@@ -39,10 +40,7 @@ p{
 }
 
 /****header***/
- 
-/* ================================
-   CONTAINER & NAVBAR
-================================ */
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -92,10 +90,7 @@ p{
   .nav-link:hover {
     color: #353535;
   }
-  
-  /* ================================
-     ICONES
-  ================================ */
+
   .icons {
     display: flex;
     align-items: center;
@@ -130,10 +125,7 @@ p{
     margin-left: auto;
     padding-right: 20px;
   }
-  
-  /* ================================
-     CART SIDEBAR
-  ================================ */
+
   #cart-sidebar {
     position: fixed;
     top: 86px;
@@ -176,10 +168,7 @@ p{
     height: auto;
     margin-right: 10px;
   }
-  
-  /* ================================
-     BOTÕES
-  ================================ */
+
   .checkout-btn,
   #close-cart,
   .remove-btn {
@@ -220,10 +209,7 @@ p{
     margin-left: auto;
     
   }
-  
-  /* ================================
-     RESPONSIVE
-  ================================ */
+
   @media screen and (max-width: 768px) {
     .navbar-collapse {
       display: none;
@@ -258,9 +244,6 @@ p{
 
 /**** MAIN ****/
 
-/* ================================
-   PRIMEIRA SEÇÃO
-================================ */
 .container-primeira {
     background: url('../img/fundo.png') center -70px / cover no-repeat;
     width: 100%;
@@ -348,9 +331,7 @@ p{
     }
   }
   
-  /* ================================
-     SEGUNDA SEÇÃO
-  ================================ */
+
   .container-segunda {
     padding: 30px;
     display: flex;
@@ -441,7 +422,7 @@ p{
   
   .fabric button:hover { background: #1b1b70; }
   
-  /* BOTÕES (mais, mix) */
+
   .container-mais,
   .container-mix {
     display: flex;
@@ -555,9 +536,6 @@ p{
     }
   }
   
-  /* ================================
-     TERCEIRA SEÇÃO
-  ================================ */
   .container-terceira {
     background: #162943;
     padding: 40px 0;
@@ -637,7 +615,7 @@ p{
   }
   
 
-/** terceira seção **/
+/** main **/
 
 /** footer **/
 
@@ -879,12 +857,12 @@ p{
 }
 
 .fabric-options button.ativo {
-    transform: translateY(20px) scale(1.1); /* aumenta tamanho */
+    transform: translateY(20px) scale(1.1);
   }
 
 .container-botaoback {
-    position: absolute;  /* fora do fluxo */
-  bottom: 30px;        /* distância do fundo da coluna */
+    position: absolute;
+  bottom: 30px;
   left: 40px; 
 }
 
@@ -1001,11 +979,11 @@ p{
 	transform: scale(1.05) translate(2px, 2px);
 	transition: transform 0.1s ease;
 }
-/* Mobile / telas pequenas */
+
 
 @media (max-width: 768px) {
 
-    /* Colunas empilhadas */
+
     .mixtext-container {
       flex-direction: column;
       height: auto;
@@ -1040,14 +1018,14 @@ p{
       height: 670px;
       text-align: center;
       margin: 0;
-      position: relative; /* referência para botões absolutos */
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 60px; /* espaço para botões no fundo */
+      padding-bottom: 60px;
     }
 
-    /* Botões de tecido em linha horizontal */
+
     .fabric-options {
         display: flex;
         justify-content: center;
@@ -1067,7 +1045,6 @@ p{
         border-radius: 20px;
     }
   
-    /* Botão Back à esquerda e Next à direita, no fundo */
     .left-column .container-botaoback {
       position: absolute;
       left: 20px;
@@ -1084,7 +1061,6 @@ p{
         height: auto;
     }
 
-    /* Chapéu responsivo */
     .hat-preview img {
       width: 80%;
       max-width: 400px;
@@ -1092,7 +1068,6 @@ p{
       margin-left: 0;
     }
   
-    /* Progress bar centralizada */
     .progress-bar {
       width: 80%;
       max-width: 400px;
@@ -1104,7 +1079,7 @@ p{
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: 14px;
-    justify-content:left;  /* centra o grid todo */
+    justify-content:left;
     align-items: center;  
     margin-top: -100px;  
     width: 80%; 
@@ -1114,12 +1089,12 @@ p{
   .color-btn {
     width: 70px !important;
     height: 70px !important;
-    border-radius: 50%;  /* garante círculo */
+    border-radius: 50%;
     cursor: pointer;
     display: block;  
    
   }
-  /* Input para o nome */
+
 .name-input {
     justify-content:left;
     padding: 10px;
@@ -1132,11 +1107,11 @@ p{
     margin-top: 20px;
   }
   
-  /* Texto da etiqueta no chapéu */
+
   .hat-label {
     position: absolute;
-    top: 50%;     /* centro vertical */
-    left: 50%;    /* centro horizontal */
+    top: 50%;
+    left: 50%;
     transform: translate(-90px, 10px) rotate(7deg);
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
@@ -1144,11 +1119,11 @@ p{
     text-align: center;
     max-width: 100px;
     word-wrap: break-word;
-    pointer-events: none; /* não atrapalha clique na imagem */
+    pointer-events: none;
   }
   .mixtext-container.step-3 h1,
 .mixtext-container.step-3 h2 {
-  line-height: 100px; /* ou px fixos, ex: 140px */
+  line-height: 100px;
 }
 
 .add-btn {
@@ -1319,7 +1294,8 @@ p{
 
 @media (max-width: 768px) {
     .chatsection{
-        margin-top: 30px;
+    margin-top: 30px;
+    background-color: #ffffff;
     height: 740px;
     padding: 40px 0;
     }
@@ -1327,7 +1303,7 @@ p{
         margin-top: 60px;
     }
     .chat-form input, .chat-form textarea {
-        width: 300px;
+        width: 250px;
         margin: 0;
     }
     .chat-form input{
@@ -1336,4 +1312,87 @@ p{
     .chattitle h1 {
         font-size: 60px;
     }
+}
+.modal-content{
+  background-color: rgba(255, 255, 255, 0.2); 
+
+}
+
+.modal-content .form-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.modal-content .form-control {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+#loginModal input.form-control {
+  border: 3px solid #83FF15;
+  border-radius: 16px;
+  padding: 8px 12px;
+  box-shadow: none;  
+}
+
+#loginModal input.form-control:focus {
+  border-color: #83FF15;
+  box-shadow: none; 
+  outline: none;
+}
+
+#loginModal button.btn-primary {
+  background-color: transparent;
+  border: 3px solid #83FF15;
+  color: #ffffff;
+  font-family: 'bebas neue', sans-serif;
+  font-size: 20px;
+  border-radius: 16px;
+  font-weight: bold;
+  transition: transform 0.1s ease;
+  
+}
+
+#loginModal button.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+h1, h2, h3, h4, h5, h6,
+#loginModal .modal-title {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content{
+    background-color: rgba(97, 97, 97, 0.9); 
+  
+  }
+  #loginModal .modal-dialog {
+    max-width: 90%;
+    margin: 20px auto;
+  }
+  
+  #loginModal .modal-content {
+    padding: 20px;
+  }
+  
+  #loginModal .modal-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  #loginModal input.form-control {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+  
+  #loginModal button.btn-primary {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
 }

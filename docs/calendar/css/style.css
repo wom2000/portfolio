@@ -1,101 +1,78 @@
-*{
-	box-sizing: border-box;
-}
 body {
-    font-family: "bebas neue", sans-serif;
-    color: #353535;
+    background-color: #f7f3c4;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    font-family: 'bebas neue', sans-serif;
     height: 100vh;
-    background: #f7f3c4;
-  }
-  
-  .calendar-container {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
+}
+
+@font-face {
+    font-family: 'bebas neue';
+    src: url(../fonts/BebasNeue-Regular.ttf) format('truetype');
+}
+
+.calendar-container {
+    background-color: #ffffff;
     width: 350px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  }
-  
-  .calendar-header {
+    border-radius: 10px;
+    box-shadow: 0 10px 8px 0 #a7a7a7;
+    padding: 20px;
+}
+
+.calendar-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .calendar-header button {
-    background: #333;
-    color: white;
+}
+
+.calendar-header button{
+    background-color: #353535;
+    color: #ffffff;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border-radius: 8px;
     cursor: pointer;
-  }
-  
-  .calendar-weekdays {
+}
+
+.calendar-weekdays {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
     margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  .calendar-days {
+}
+
+.calendar-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    margin-top: 10px;
     text-align: center;
-  }
-  
-  .calendar-days div {
+    margin-top: 10px;
+
+}
+
+.calendar-days div {
     padding: 10px;
     margin: 2px;
     border-radius: 5px;
-    cursor: pointer; /* <-- isso faz o cursor virar pointer */
+    cursor: pointer;
     transition: background 0.2s, transform 0.2s;
-  }
-  
-  /* Hover para dar efeito visual */
-  .calendar-days div:hover {
-    background: rgba(0, 123, 255, 0.2);
-    transform: scale(1.05);
-  }
-  
-  /* Dias com evento */
-  .calendar-days div.has-event {
-    background: #007bff;
-    color: white;
-    font-weight: bold;
-  }
-  .calendar-days div.today {
-    background: #333;
-    color: white;
-  }
-  .calendar-days div.has-event {
-    background: #007bff;
-    color: white;
-    font-weight: bold;
-  }
+}
 
-  @media (max-width: 598px) {
-    .calendar-container {
-      padding: 15px;
-    }
-  
-    .calendar-days div {
-      padding: 8px;
-      font-size: 12px;
-    }
-  
-    .calendar-header h2 {
-      font-size: 16px;
-    }
-  
-    .calendar-header button {
-      padding: 4px 8px;
-      font-size: 14px;
-    }
-  }
-  
+.calendar-days div:hover {
+    background: #bc8888;
+    transform: scale(1.05);
+}
+
+.calendar-days div.has-event {
+    background: #7e5f5f;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-days div.today {
+    background: #c84371;
+    color: white;
+}
+
+
+ 
