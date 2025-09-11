@@ -1,0 +1,109 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: rgb(54, 54, 54);
+}
+img{
+	max-width: 100%;
+}
+p{
+	font-family: sans-serif;
+	color: black;
+}
+.calculadora{
+	width: 300px;
+	max-width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: #fff7bd;
+	transform: translate(-50%, -50%);
+	padding: 6px;
+	border-radius: 5px;
+}
+.ecra{
+	background-color: #fff7bd;
+	width: 100%;
+}
+.ecra .visor{
+	background-color: #ffffff;
+	width: 96%;
+	margin-left: 5px;
+	color: #353535;
+	line-height: 80px;
+	font-size: 40px;
+	text-align: right;
+	pointer-events: none;
+	padding: 0px 10px;
+	border: none;
+	border-radius: 5px;
+	font-weight: 100;
+}
+.btn{
+	background-color: rgb(198, 151, 190);
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 5px;
+	width: 22%;
+	float: left;
+	border: none;
+	margin: 4px;
+	transition: .5s;
+}
+
+.btn:hover{
+	opacity: .8;
+	transition: .5s;
+}
+.btn:active{
+	transform: scale(.9);
+	transition: .2s;
+}
+.btnescuro{
+	background-color: rgb(66, 51, 63);
+}
+.btnlaranja{
+	background-color: rgb(126, 95, 121);
+}
+.btnx2{
+	width: 47%;
+}
+.clear{
+	clear: both;
+}
+
+.conteudo{
+	color: white;
+	line-height: 18px;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+.conteudo span{
+	font-size: 18px
+}
+
+@keyframes pull{
+	0%{
+		top: -380px;
+	}
+	5%{
+		top: -360px;
+	}
+	10%{
+		top: -390px;
+	}
+	13%{
+		top: -390px;
+	}
+	16%{
+		top: -380px;
+	}
+}
+
+
+

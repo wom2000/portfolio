@@ -1,0 +1,97 @@
+<!DOCTYPE hmtl>
+<html>
+	<head>
+		<title>CALCULATOR</title>
+		<meta charset="utf-8"> <!-- Tag simples -->
+		<meta name="description" content="Texto descritivo da pagina ate 255 carateres">
+		<meta name="keywords" content="palavra chave 1, termo chave 2, ate 10 termos chave">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+			<div class="conteudo">
+			</div>
+
+		<div class="calculadora">
+			<div class="ecra">
+				<input type="text" name="visor" class="visor">
+			</div>
+			<div class="btns">
+				<div class="linha">
+					<button class="btn btnescuro btnonoff">
+						on/off
+					</button>
+					<button class="btn btnescuro btnac">
+						ac
+					</button>
+					<button class="btn btndinamico btnescuro btnpercent" data-valor="%">
+						%
+					</button>
+					<button class="btn btndinamico btnlaranja btndivide" data-valor="/">
+						÷
+					</button>
+				</div>
+				<div class="linha">
+					<button class="btn btndinamico btn7"  data-valor="7">
+						7
+					</button>
+					<button class="btn btndinamico btn8"  data-valor="8">
+						8
+					</button>
+					<button class="btn btndinamico btn9"  data-valor="9">
+						9
+					</button>
+					<button class="btn btndinamico btnlaranja btnmulti"  data-valor="*">
+						x
+					</button>
+				</div>
+				<div class="linha">
+					<button class="btn btndinamico btn4"  data-valor="4">
+						4
+					</button>
+					<button class="btn btndinamico btn5"  data-valor="5">
+						5
+					</button>
+					<button class="btn btndinamico btn6"  data-valor="6">
+						6
+					</button>
+					<button class="btn btndinamico btnlaranja btnsub"  data-valor="-">
+						-
+					</button>
+				</div>
+				<div class="linha">
+					<button class="btn btndinamico btn1"  data-valor="1">
+						1
+					</button>
+					<button class="btn btndinamico btn2"  data-valor="2">
+						2
+					</button>
+					<button class="btn btndinamico btn3"  data-valor="3">
+						3
+					</button>
+					<button class="btn btndinamico btnlaranja btnsoma"  data-valor="+">
+						+
+					</button>
+				</div>
+				<div class="linha">
+					<button class="btn btndinamico btnx2 btn0"  data-valor="0">
+						0
+					</button>
+					<button class="btn btndinamico btncomma"  data-valor=".">
+						,
+					</button>
+					<button class="btn btnlaranja btnresult">
+						=
+					</button>
+				</div>
+				<div class="clear">
+				</div>
+			</div>
+		</div>
+		<!-- IMPORTAÇÂO JQUERY E BOOTSTRAP -->
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
