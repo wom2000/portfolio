@@ -99,12 +99,6 @@ input[type="range"] {
     flex-direction: column;
   }
 
-  .toolbar {
-    order: 2;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 6px;
-  }
 
   .controls-left, 
   .controls-right {
