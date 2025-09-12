@@ -95,10 +95,6 @@ input[type="range"] {
 
 
 @media (max-width: 720px) {
-  .paint-container {
-    flex-direction: column;
-  }
-
   .controls-left, 
   .controls-right {
     flex-direction: row;

@@ -1,0 +1,41 @@
+<!DOCTYPE hmtl>
+<html>
+	<head>
+		<title>NOTES</title>
+		<meta charset="utf-8"> <!-- Tag simples -->
+		<meta name="description" content="Texto descritivo da pagina ate 255 carateres">
+		<meta name="keywords" content="palavra chave 1, termo chave 2, ate 10 termos chave">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+
+		<div class="container">
+			<h1>Notes</h1>
+			<form id="noteForm">
+			  <div class="form-group">
+				<label for="noteTitle">title</label><br>
+				<input type="text" id="noteTitle" placeholder="title" required>
+			  </div>
+			  <div class="form-group">
+				<label for="noteContent">note</label><br>
+				<textarea id="noteContent" rows="5" placeholder="note" required></textarea>
+			  </div>
+			  <button type="submit">add note</button>
+			</form>
+	  
+
+			<div class="notes-container">
+				<h2>saved</h2>
+			<div id="notesList">
+			  <!-- As notas adicionadas aparecerão aqui -->
+			</div>
+			</div>
+		</div>
+		<!-- IMPORTAÇÂO JQUERY E BOOTSTRAP -->
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
