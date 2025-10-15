@@ -1,0 +1,57 @@
+.deensimc-button-marquee {
+  width: fit-content;
+  margin-inline: auto;
+  white-space: nowrap;
+  isolation: isolate;
+  text-align: center;
+  transition: all 200ms ease;
+  background: blueviolet; /* dynamic */
+  border-radius: 0.25rem; /* dynamic */
+  padding-block: 0;
+  cursor: pointer;
+}
+.deensimc-button,
+.deensimc-button-text {
+  background: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase; /* dynamic */
+  text-decoration: none; /* dynamic */
+  color: white; /* dynamic */
+  font-size: 1rem; /* dynamic */
+  font-weight: 500; /* dynamic */
+  line-height: 1.2; /* dynamic */
+}
+.deensimc-button {
+  padding: 1rem 2rem; /* dynamic */
+  z-index: 1;
+  width: 100%;
+  justify-content: center;
+}
+
+.deensimc-button:hover {
+  color: white;
+}
+
+.deensimc-button-marquee .deensimc-marquee-track-wrapper {
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: opacity 200ms ease;
+  pointer-events: none;
+}
+
+.deensimc-button-marquee-on-hover .deensimc-marquee-track-wrapper {
+  opacity: 0;
+}
+.deensimc-button-marquee-on-hover:hover .deensimc-marquee-track-wrapper {
+  opacity: 1;
+}
+
+.deensimc-button-marquee-init:hover .deensimc-marquee-track-wrapper {
+  opacity: 0;
+}
