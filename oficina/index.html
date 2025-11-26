@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<title>oficina</title>
+<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+		<nav class="navbar navbar-expand-lg">
+		  <div class="container">
+			<a class="navbar-logo" href="index.html">
+			  <img src="img/logo.png" alt="logo">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="toggle navigation">
+			  <i class="fa-solid fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="menu">
+			  <ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="mixtext.html">about</a></li>
+				<li class="nav-item"><a class="nav-link" href="chat.html">Chat</a></li>
+			  </ul>
+			</div>
+
+			<div class="icons">
+        <a href="#" class="nav-icon">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <div id="cart-icon" class="nav-icon">
+          <i class="fa-brands fa-square-facebook"></i>
+        </div>
+		  </div>
+		</nav>
+	  </header>
+
+
+    <main>
+
+    <div class="video1">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="img/pintura.mp4" type="video/mp4">
+      </video>
+    </div>
+ 
+	<div class="services-container">
+    <ul class="services">
+      <li class="service"><img src="img/pistola.png"></li>
+	  <li class="service"><img src="img/capo.png"></li>
+	  <li class="service"><img src="img/choque.png"></li>
+	</ul>
+    </div>
+	<div class="grid-container">
+		<video src="img/pintura.mp4" muted loop></video>
+		<video src="img/polir.mp4" muted loop></video>
+		<video src="img/pintura.mp4" muted loop></video>
+	  </div>
+	  <script>
+		const videos = document.querySelectorAll(".grid-container video");
+	  
+		videos.forEach((video, index) => {
+  setTimeout(() => {
+    video.play().catch(err => {
+      console.log("Erro ao reproduzir vídeo:", err);
+    });
+  }, index * 1400);
+});
+
+	  </script>
+	  <div class="art-container">
+		<h2>a outra forma de arte</h2>
+	  
+		<!-- imagem do carro que "segue" o h2 -->
+		<div class="car-follow">
+		  <img src="img/carropreto.png" alt="carro linha">
+		</div>
+	  </div>
+	  <script>
+		document.addEventListener('DOMContentLoaded', () => {
+		  const art = document.querySelector('.art-container');
+		  if (!art) return;
+		
+		  const h2 = art.querySelector('h2');
+		  const carWrap = art.querySelector('.car-follow');
+		  if (!h2 || !carWrap) return;
+		
+		  let start = 0, end = 0;
+		  const maxScale = 3.0;   // escala máxima (1 -> maxScale)
+		  const moveUp = 180;     // quantos px sobe enquanto aumenta
+		  const fadeAtEnd = true; // se true, desaparece quando progress == 1
+		
+		  // recalcula os pontos de início/fim (chama em load/resize)
+		  function recalc() {
+			const h2Rect = h2.getBoundingClientRect();
+			const h2TopDoc = h2Rect.top + window.scrollY;
+			// quando o efeito começa: quando o h2 estiver ~40% do topo do viewport
+			start = h2TopDoc - window.innerHeight * 0.6;
+			// quando o efeito termina: um pouco depois do h2 ter passado
+			end = h2TopDoc + h2.offsetHeight + 220;
+		  }
+		  recalc();
+		  window.addEventListener('resize', recalc);
+		
+		  // rAF scroll handler para performance
+		  let ticking = false;
+		  window.addEventListener('scroll', () => {
+			if (!ticking) {
+			  window.requestAnimationFrame(update);
+			  ticking = true;
+			}
+		  }, {passive: true});
+		
+		  function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+		
+		  function update() {
+			ticking = false;
+			const scroll = window.scrollY;
+			let progress = (scroll - start) / (end - start);
+			progress = clamp(progress, 0, 1);
+		
+			// calcula transform
+			const scale = 1 + progress * (maxScale - 1);
+			const ty = -progress * moveUp; // sobe à medida que aumenta
+		
+			carWrap.style.transform = `translate(-50%, ${ty}px) scale(${scale})`;
+		
+			// controla aparecimento: fica visível enquanto progress < 1,
+			// quando atinge 1 desaparece (podes alterar para um fade se preferires)
+			if (fadeAtEnd) {
+			  carWrap.style.opacity = progress < 1 ? '1' : '0';
+			} else {
+			  carWrap.style.opacity = '1';
+			}
+		  }
+		
+		  // correr uma vez para definir estado inicial
+		  update();
+		});
+		</script>
+		<div class="containersobre">	
+		</div>
+		
+
+
+	<!-- importação jquery e bootstrap (defer permite meter estes links no head a serem executados no fim)-->
+
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/all.min.js"></script>
+	<script type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.add-menu-item h2{
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+form {
+    background-color: #b9d6bf;
+    padding: 10px;
+}
+
+form input {
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+
+}
