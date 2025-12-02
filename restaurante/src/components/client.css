@@ -1,0 +1,94 @@
+.make-order {
+  max-width: 32rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.make-order h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Form layout */
+.make-order form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Cada div do form */
+.make-order form > div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.4rem;
+}
+
+.make-order label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs e Selects */
+.make-order input,
+.make-order select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.make-order input:focus,
+.make-order select:focus {
+  border-color: #000;
+}
+
+/* Estilo dos optgroups */
+.make-order optgroup {
+  font-weight: bold;
+  color: #444;
+}
+
+/* Botões */
+.make-order button {
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #000;
+}
+
+/* Botão principal */
+.make-order button[type="submit"] {
+  background: #000;
+  color: #fff;
+}
+
+.make-order button[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+/* Botão Cancel */
+.make-order button[type="button"] {
+  background: #fff;
+  color: #000;
+}
+
+.make-order button[type="button"]:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Mensagens */
+.success {
+  color: green;
+  font-weight: 600;
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+}

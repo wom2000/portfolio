@@ -1,0 +1,26 @@
+body {
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  background-image: url('./assets/padrao.svg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+  .container {
+  width: 500px;
+  min-height: 70vh;
+  display: flex;
+  background-color: #fff9dc;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+h1 {
+    text-align: center;
+}
+

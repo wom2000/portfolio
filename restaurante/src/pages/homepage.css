@@ -1,0 +1,25 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  flex: 1;
+  gap: 30px;
+}
+
+
+.homepage a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+
+.homepage a:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.3s;
+}

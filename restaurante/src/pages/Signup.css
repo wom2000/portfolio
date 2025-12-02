@@ -1,0 +1,155 @@
+/* Container principal */
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.signup-page h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #000;
+}
+
+.signup-page p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+/* Formulário */
+.signup-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  gap: 1rem;
+}
+
+/* Controls gerais */
+.control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 250px;
+}
+
+.control label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+}
+
+.control input,
+.control select {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+  transition: border 0.3s;
+}
+
+.control input:focus,
+.control select:focus {
+  border-color: #000;
+  outline: none;
+}
+
+.control select {
+  cursor: pointer;
+}
+
+/* Control row (para passwords lado a lado) */
+.control-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Checkbox control */
+.checkbox-control {
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
+  gap: 0.5rem;
+}
+
+.checkbox-control label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.checkbox-control input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Form actions (botão submit) */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Botão */
+.button {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Mensagem de erro */
+.control-row p {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .signup-page {
+    padding: 1rem;
+  }
+
+  .control,
+  .control-row {
+    max-width: 100%;
+  }
+
+  .checkbox-control label {
+    white-space: normal;
+  }
+}

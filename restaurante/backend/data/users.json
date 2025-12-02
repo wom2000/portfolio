@@ -1,0 +1,23 @@
+[
+  {
+    "email": "costafabiana9@gmail.com",
+    "password": "123",
+    "name": "fabiana",
+    "role": "bar",
+    "termsAccepted": true
+  },
+  {
+    "email": "costafabiana7@gmail.com",
+    "password": "123",
+    "name": "eva",
+    "role": "client",
+    "termsAccepted": true
+  },
+  {
+    "email": "costafabiana0@gmail.com",
+    "password": "123",
+    "name": "vera",
+    "role": "kitchen",
+    "termsAccepted": true
+  }
+]

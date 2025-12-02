@@ -1,0 +1,88 @@
+.add-menu-item {
+  max-width: 32rem;            /* largura parecida com outros forms */
+  margin: 2rem auto;
+  padding: 2rem;
+
+  text-align: center;
+}
+
+.add-menu-item h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Form container */
+.add-menu-item form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Cada linha do form */
+.add-menu-item form > div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.4rem;
+}
+
+.add-menu-item label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs */
+.add-menu-item input,
+.add-menu-item select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.add-menu-item input:focus,
+.add-menu-item select:focus {
+  border-color: #000;
+}
+
+/* Botões */
+.add-menu-item button {
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #000;
+}
+
+/* Botão principal */
+.add-menu-item button[type="submit"] {
+  background: #000;
+  color: #fff;
+}
+
+.add-menu-item button[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+/* Botão de cancelar */
+.add-menu-item button[type="button"] {
+  background: #fff;
+  color: #000;
+}
+
+.add-menu-item button[type="button"]:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Mensagens */
+.success {
+  color: green;
+  font-weight: 600;
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+}

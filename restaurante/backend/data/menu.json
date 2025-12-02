@@ -1,0 +1,50 @@
+[
+  {
+    "name": "jardineira",
+    "category": "main"
+  },
+  {
+    "name": "mousse de chocolate",
+    "category": "dessert"
+  },
+  {
+    "name": "romeu e julieta",
+    "category": "dessert"
+  },
+  {
+    "name": "bolo de bolacha",
+    "category": "dessert"
+  },
+  {
+    "name": "pudim",
+    "category": "dessert"
+  },
+  {
+    "name": "vitela com batata assada",
+    "category": "main"
+  },
+  {
+    "name": "frango estufado com ervilhas",
+    "category": "main"
+  },
+  {
+    "name": "bacalhau à brás",
+    "category": "main"
+  },
+  {
+    "name": "alheira grelhada",
+    "category": "entry"
+  },
+  {
+    "name": "tábua de enchidos",
+    "category": "entry"
+  },
+  {
+    "name": "ameijoas à bulhão pato",
+    "category": "entry"
+  },
+  {
+    "name": "seleção de salgadinhos",
+    "category": "entry"
+  }
+]

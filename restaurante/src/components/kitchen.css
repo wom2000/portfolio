@@ -1,0 +1,57 @@
+/* Container */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+
+/* Mensagem quando não há pedidos */
+.no-orders-message,
+.orders-list-empty {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Cada cartão de pedido */
+.order-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.order-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.order-card p {
+  margin: 0.2rem 0;
+}
+
+/* Status */
+.order-card .status {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Botão */
+.order-card button {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.order-card button:hover {
+  background: #000;
+  color: #fff;
+}
