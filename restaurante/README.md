@@ -22,7 +22,7 @@ Steps
 
 Clone the repository:
 
-bashgit clone https://github.com/wom2000/restaurante.git
+bashgit clone https://github.com/wom2000/portfolio/tree/main/restaurante
 cd restaurante
 
 Install frontend dependencies:
