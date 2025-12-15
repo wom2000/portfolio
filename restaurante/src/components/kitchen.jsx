@@ -1,56 +1,79 @@
-import { useState, useEffect } from 'react';
-import './kitchen.css'
+import { useEffect, useState } from "react";
 
 export default function Kitchen() {
-  const [orders, setOrders] = useState([]);
+    const [orders, setOrders] = useState([]);
+    const [error, setError] = useState("");
 
-  useEffect(() => {
-    fetchOrders();
-  }, []);
+    useEffect(() => {
+        fetch("http://localhost:3000/orders")
+            .then((res) => res.json())
+            .then((data) => setOrders(data))
+            .catch(() => setError("Erro ao buscar pedidos"));
+    }, []);
 
-  const fetchOrders = () => {
-    fetch("http://localhost:3000/orders")
-      .then(response => response.json())
-      .then(data => setOrders(data))
-      .catch(err => console.error('Erro:', err));
-  };
+    function markInProgress(timestamp) {
+        fetch(`http://localhost:3000/orders/${timestamp}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ status: "em confeção" }),
+        })
+            .then((res) => {
+                if (!res.ok) throw new Error("Erro ao atualizar estado");
+                setOrders(prev =>
+                    prev.map(order =>
+                        order.timestamp === timestamp
+                            ? { ...order, status: "em confeção" }
+                            : order
+                    )
+                );
+            })
+            .catch(() => setError("Erro ao atualizar estado"));
+    }
 
-  const displayTime = (timestamp) => {
-    const date = new Date(timestamp);
-    return date.toLocaleTimeString('pt-PT', {
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-  };
-  const markAsReady = (timestamp) => {
-    fetch(`http://localhost:3000/orders/${timestamp}`, {
-      method: "DELETE",
-      headers: { "Content-Type": "application/json" },
-    })
-      .then(response => response.json())
-      .then(result => { fetchOrders() })
-      .catch(err => console.error('Erro:', err));
-  };
-
-  const pendingOrders = orders.filter(order => order.status === 'pending');
-
-  return (
-    <div>
+    function completeOrder(timestamp) {
+        fetch(`http://localhost:3000/orders/${timestamp}`, {
+            method: "DELETE",
+        })
+            .then(res => {
+                if (!res.ok) throw new Error("Erro ao remover pedido");
+                setOrders(prev => prev.filter(order => order.timestamp !== timestamp));
+            })
+            .catch(() => setError("Erro ao remover pedido"));
+    }
 
 
-      {pendingOrders.length === 0 && <p>no pending orders</p>}
-
-      <div className="orders-list">
-        {pendingOrders.map((order) => (
-          <div key={order.timestamp} className="order-card">
-            <h3>{order.itemName}</h3>
-            <p>Quantity: {order.quantity}</p>
-            <p>Time: {displayTime(order.timestamp)}</p>
-            <p className="status">Status: {order.status}</p>
-            <button onClick={() => markAsReady(order.timestamp)}>mark as ready </button>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+    return (
+        <div>
+            <h2>Pedidos da Cozinha</h2>
+            {error && <p>{error}</p>}
+            {orders.length === 0 && <p>Nenhum pedido disponível</p>}
+            <ul>
+                {orders.map((order) => (
+                    <li key={order.timestamp}>
+                        <p>Cliente: {order.name}</p>
+                        <p>Hora: {new Date(order.timestamp).toLocaleTimeString()}</p>
+                        <p>Status: {order.status}</p>
+                        <p>Itens:</p>
+                        <ul>
+                            {order.items.map((item, index) => (
+                                <li key={index}>
+                                    {item.name} ({item.category})
+                                </li>
+                            ))}
+                        </ul>
+                        {order.status === "pending" && (
+                            <button onClick={() => markInProgress(order.timestamp)}>
+                                Em Confeção
+                            </button>
+                        )}
+                        {order.status === "em confeção" && (
+                            <button onClick={() => completeOrder(order.timestamp)}>
+                                Concluído
+                            </button>
+                        )}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }

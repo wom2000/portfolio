@@ -23,4 +23,9 @@ body {
 h1 {
     text-align: center;
 }
+ul {
+  list-style: none;
+  align-self: center;
+  padding: 0;
+}
 

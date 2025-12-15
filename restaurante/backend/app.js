@@ -76,6 +76,7 @@ app.post("/menu", async (req, res) => {
   await fs.writeFile("./data/menu.json", JSON.stringify(menuItems, null, 2));
   res.status(200).json({ message: "Menu item inserted!" });
 });
+
 //rota de pedidos
 app.get("/orders", async (req, res) => {
   const fileContent = await fs.readFile("./data/orders.json");
@@ -93,20 +94,20 @@ app.post("/orders", async (req, res) => {
   res.status(200).json({ message: "Order inserted!" });
 });
 
-app.put("/orders/:index", async (req, res) => {
+app.put("/orders/:timestamp", async (req, res) => {
   const fileContent = await fs.readFile("./data/orders.json");
   const orders = JSON.parse(fileContent);
 
-  const index = parseInt(req.params.index);
+  const timestamp = req.params.timestamp;
+const order = orders.find(order => order.timestamp === timestamp);
 
-  if (index >= 0 && index < orders.length) {
-    orders[index].status = req.body.status;
-
-    await fs.writeFile("./data/orders.json", JSON.stringify(orders, null, 2));
-    res.status(200).json({ message: "Order updated!" });
-  } else {
-    res.status(404).json({ message: "Order not found" });
-  }
+if (order) {
+  order.status = req.body.status;
+  await fs.writeFile("./data/orders.json", JSON.stringify(orders, null, 2));
+  res.status(200).json({ message: "Order updated!" });
+} else {
+  res.status(404).json({ message: "Order not found" });
+}
 });
 app.delete("/orders/:timestamp", async (req, res) => {
   const fileContent = await fs.readFile("./data/orders.json");
@@ -118,13 +119,13 @@ app.delete("/orders/:timestamp", async (req, res) => {
 
   if (index !== -1) {
     orders.splice(index, 1);
-
     await fs.writeFile("./data/orders.json", JSON.stringify(orders, null, 2));
     res.status(200).json({ message: "Order removed!" });
   } else {
     res.status(404).json({ message: "Order not found" });
   }
 });
+
 app.use((req, res) => {
   res.status(404).json({ message: "404 - Not Found" });
 });

@@ -1,51 +1,50 @@
-import {useState} from 'react'
-import {useNavigate} from 'react-router-dom'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Signup.css';
 
 export default function Signup() {
 
-    const [passwordsAreNotEqual, setPasswordsAreNotEqual] = useState(false);
-    const navigate = useNavigate();
+  const [passwordsAreNotEqual, setPasswordsAreNotEqual] = useState(false);
+  const navigate = useNavigate();
 
-    function handleSubmit(event){
+  function handleSubmit(event) {
+    event.preventDefault();
 
-        event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
 
-        const formData = new FormData(event.target);
-        const data = Object.fromEntries(formData);
-
-        if (data.password != data.confirmPassword){
-            setPasswordsAreNotEqual(true);
-        }
-const user = {
-    email: data.email,
-    password: data.password,
-    name: data["name"],
-    role: data.role,
-    termsAccepted: data.terms === "on",
-  };
- 
-  const response = fetch("http://localhost:3000/signup", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(user),
-  });
-
-  console.log(response)
-  navigate('/', {state: {message: 'user registado com sucesso'}})
+    if (data.password != data.confirmPassword) {
+      setPasswordsAreNotEqual(true);
     }
- 
-    return (
-      <div className="signup-page">
-        <h2>Welcome to our restaurant</h2>
-        <form onSubmit={handleSubmit} action = "/backend">
+    const user = {
+      email: data.email,
+      password: data.password,
+      name: data["name"],
+      role: data.role,
+      termsAccepted: data.terms === "on",
+    };
+
+    const response = fetch("http://localhost:3000/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    });
+
+    console.log(response)
+    navigate('/', { state: { message: 'user registado com sucesso' } })
+  }
+
+  return (
+    <div className="signup-page">
+      <h2>Welcome to our restaurant</h2>
+      <form onSubmit={handleSubmit} action="/backend">
         <p>Let's get you started </p>
- 
+
         <div className="control">
           <label htmlFor="email">Email</label>
           <input id="email" type="email" name="email" required />
         </div>
- 
+
         <div className="control-row">
           <div className="control">
             <label htmlFor="password">Password</label>
@@ -62,17 +61,17 @@ const user = {
           </div>
           {passwordsAreNotEqual && <p>passwords don't match</p>}
         </div>
- 
- 
+
+
         <div className="control-row">
           <div className="control">
             <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name"
-            required/>
+              required />
           </div>
- 
+
         </div>
- 
+
         <div className="control">
           <label htmlFor="phone">role</label>
           <select id="role" name="role" required>
@@ -87,13 +86,13 @@ const user = {
             agree to the terms and conditions
           </label>
         </div>
- 
+
         <div className="form-actions">
           <button type="submit" className="button">
             Sign up
           </button>
         </div>
       </form>
-      </div>
-    );
-  }
+    </div>
+  );
+}
