@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Membros | Clube Padel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="members-page">
+    <div id="siteHeader"></div>
+
+    <main class="members-catalog-main py-5">
+        <section class="container">
+            <div class="members-directory-hero mb-4">
+                <p class="members-directory-kicker mb-1">Comunidade</p>
+                <h1 class="members-catalog-title mb-2">Membros</h1>
+            </div>
+
+            <div class="members-directory-toolbar card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-12 col-lg-7">
+                            <span class="members-filters-label d-block mb-2">Categorias</span>
+                            <div class="members-catalog-filters">
+                                <button class="btn members-filter-chip is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+                                <button class="btn members-filter-chip" type="button" data-filter="animais" aria-pressed="false">Animais</button>
+                                <button class="btn members-filter-chip" type="button" data-filter="turmas" aria-pressed="false">Turmas</button>
+                                <button class="btn members-filter-chip" type="button" data-filter="voluntarios" aria-pressed="false">Voluntários</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="membersGrid">
+                <div class="col-12 col-md-6 col-xl-4 members-card-col" data-categories="animais voluntarios" data-name="Lince Ibérico" data-description="Espécie protegida que inspira os nossos projetos de conservação e sensibilização.">
+                    <article class="card members-card h-100 border-0 shadow-sm">
+                        <img src="assets/img/padel1.jpg" class="card-img-top members-card-image" alt="Lince Ibérico">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="members-card-title">Lince Ibérico</h2>
+                            <p class="members-card-tags mb-3"><span class="badge text-bg-light">Animais</span><span class="badge text-bg-light">Voluntários</span></p>
+                            <a href="#" class="btn btn-outline-dark mt-auto align-self-start members-profile-btn">Ver perfil</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 members-card-col" data-categories="turmas voluntarios" data-name="Equipa de sensibilização" data-description="Voluntários dedicados à educação ambiental em escolas e ações de bairro.">
+                    <article class="card members-card h-100 border-0 shadow-sm">
+                        <img src="assets/img/padel2.jpg" class="card-img-top members-card-image" alt="Equipa de sensibilização">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="members-card-title">Equipa de sensibilização</h2>
+                            <p class="members-card-tags mb-3"><span class="badge text-bg-light">Voluntários</span><span class="badge text-bg-light">Turmas</span></p>
+                            <a href="#" class="btn btn-outline-dark mt-auto align-self-start members-profile-btn">Ver perfil</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 members-card-col" data-categories="animais turmas" data-name="Teste" data-description="Grupo experimental que apoia novas atividades e iniciativas comunitárias.">
+                    <article class="card members-card h-100 border-0 shadow-sm">
+                        <img src="assets/img/padel3.jpg" class="card-img-top members-card-image" alt="Teste">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="members-card-title">Teste</h2>
+                            <p class="members-card-tags mb-3"><span class="badge text-bg-light">Turmas</span><span class="badge text-bg-light">Animais</span></p>
+                            <a href="#" class="btn btn-outline-dark mt-auto align-self-start members-profile-btn">Ver perfil</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 members-card-col" data-categories="voluntarios" data-name="Teste com multa e inscrição" data-description="Equipa de apoio a eventos e campanhas, garantindo logística e boas-vindas.">
+                    <article class="card members-card h-100 border-0 shadow-sm">
+                        <img src="assets/img/pp.jpg" class="card-img-top members-card-image" alt="Teste com multa e inscrição">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="members-card-title">Teste com multa e inscrição</h2>
+                            <p class="members-card-tags mb-3"><span class="badge text-bg-light">Voluntários</span></p>
+                            <a href="#" class="btn btn-outline-dark mt-auto align-self-start members-profile-btn">Ver perfil</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <p id="membersEmptyState" class="alert alert-light border mt-4 d-none mb-0">Não encontrámos membros com esse filtro/pesquisa.</p>
+        </section>
+    </main>
+
+    <div class="modal fade members-profile-modal" id="membersProfileModal" tabindex="-1" aria-label="Perfil do membro" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close members-modal-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                <div class="modal-body">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-12 col-md-5">
+                            <img id="membersProfileImage" class="members-modal-image" src="" alt="">
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <p class="members-modal-kicker mb-2">Membro</p>
+                            <h3 id="membersProfileName" class="members-modal-title mb-3"></h3>
+                            <p id="membersProfileDescription" class="members-modal-text mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <div class="row footer-grid">
+                <div class="col-12 col-md-4">
+                    <h3 class="footer-heading">Links</h3>
+                    <ul class="list-unstyled footer-list">
+                        <li><a href="#" class="footer-link">Contactos</a></li>
+                        <li><a href="#" class="footer-link">Ser sócio</a></li>
+                        <li><a href="#" class="footer-link">Login Área de Sócio</a></li>
+                        <li><a href="#" class="footer-link">Recuperar Palavra-Passe</a></li>
+                        <li><a href="#" class="footer-link">Política de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Termos e Condições</a></li>
+                        <li><a href="#" class="footer-link">Livro de Reclamações</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="footer-heading">Informações</h3>
+                    <ul class="list-unstyled footer-list">
+                        <li><a href="#" class="footer-link">Estatutos</a></li>
+                        <li><a href="#" class="footer-link">Documentos</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="footer-heading">Contactos</h3>
+                    <ul class="list-unstyled footer-list">
+                        <li><a href="mailto:suporte@socios.online" class="footer-link"><i class="bi bi-envelope me-2"></i>suporte@socios.online</a></li>
+                        <li><a href="tel:+351256001967" class="footer-link"><i class="bi bi-telephone me-2"></i>256 001 967</a></li>
+                        <li class="footer-note">(Chamada para a rede fixa nacional)</li>
+                        <li class="footer-link"><i class="bi bi-geo-alt me-2"></i>São João da Madeira</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-socials d-flex justify-content-center">
+                <a href="#" class="footer-social" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="footer-social" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 com o Apoio de Socios.Online</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
