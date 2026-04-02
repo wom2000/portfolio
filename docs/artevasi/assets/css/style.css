@@ -359,6 +359,8 @@ body,
     padding: 16px;
 }
 
+.pots-mini-grid--plastic .pots-image-tile--text,
+.pots-mini-grid--ceramics .pots-image-tile--text,
 .pots-mini-grid--terracotta .pots-image-tile--text,
 .pots-mini-grid--terracotta-traditional .pots-image-tile--text,
 .pots-mini-grid--terracotta-brio .pots-image-tile--text {
@@ -395,6 +397,8 @@ body,
     gap: 4px;
 }
 
+.pots-mini-grid--plastic .pots-image-block-title,
+.pots-mini-grid--ceramics .pots-image-block-title,
 .pots-mini-grid--terracotta .pots-image-block-title,
 .pots-mini-grid--terracotta-traditional .pots-image-block-title,
 .pots-mini-grid--terracotta-brio .pots-image-block-title {

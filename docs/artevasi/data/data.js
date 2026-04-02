@@ -506,6 +506,34 @@ window.APP_DATA = {
         "label": "Plastic",
         "subtitle": "Recycled",
         "title": "Plastic",
+        "textBlocks": [
+          {
+            "titleHtml": "<span class=\"pots-image-title-italic\">Traditional</span> Terracotta",
+            "icons": [
+              {
+                "src": "./assets/img/made-with-natural-materials.svg",
+                "alt": "Made with natural resources",
+                "label": "Made with natural resources"
+              },
+              {
+                "src": "./assets/img/breathable.svg",
+                "alt": "Breathable",
+                "label": "Breathable"
+              },
+              {
+                "src": "./assets/img/frost-resistant.svg",
+                "alt": "Frost proof",
+                "label": "Frost proof"
+              },
+              {
+                "src": "./assets/img/indoor-or-outdoor-use.svg",
+                "alt": "Outdoor use",
+                "label": "Outdoor use",
+                "sublabel": "Indoor use with saucer"
+              }
+            ]
+          }
+        ],
         "tiles": [
           {
             "type": "image",
@@ -622,6 +650,34 @@ window.APP_DATA = {
         "label": "Ceramics",
         "subtitle": "Handmade",
         "title": "Ceramics",
+        "textBlocks": [
+          {
+            "titleHtml": "<span class=\"pots-image-title-italic\">Traditional</span> Terracotta",
+            "icons": [
+              {
+                "src": "./assets/img/made-with-natural-materials.svg",
+                "alt": "Made with natural resources",
+                "label": "Made with natural resources"
+              },
+              {
+                "src": "./assets/img/breathable.svg",
+                "alt": "Breathable",
+                "label": "Breathable"
+              },
+              {
+                "src": "./assets/img/frost-resistant.svg",
+                "alt": "Frost proof",
+                "label": "Frost proof"
+              },
+              {
+                "src": "./assets/img/indoor-or-outdoor-use.svg",
+                "alt": "Outdoor use",
+                "label": "Outdoor use",
+                "sublabel": "Indoor use with saucer"
+              }
+            ]
+          }
+        ],
         "tiles": [
           {
             "type": "image",
